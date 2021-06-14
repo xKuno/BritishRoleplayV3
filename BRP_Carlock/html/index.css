@@ -1,0 +1,63 @@
+body {
+    background: none !important;
+}
+
+#lock {
+    width: 370px;
+    height: 450px;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
+
+#submit {
+    width: 100px;
+    background: transparent;
+    height: 71px;
+    border-radius: 0px 0px 0px 0px;
+    position: fixed;
+    right: 140px;
+    bottom: 110px;
+}
+
+#submit2 {
+    width: 100px;
+    background: transparent;
+    height: 69px;
+    border-radius: 25px 0px 0px 0px;
+    position: fixed;
+    right: 125px;
+    bottom: 280px;
+}
+
+#submit3 {
+    width: 110px;
+    background: transparent;
+    height: 70px;
+    border-radius: 0px 0px 0px 0px;
+    position: fixed;
+    right: 130px;
+    bottom: 190px;
+}
+
+#submit4 {
+    width: 40px;
+    background: transparent;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    right: 207px;
+    bottom: 388px;
+}
+
+button {
+    background-color: aliceblue;
+    padding: 12px;
+}
+
+input {
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+}

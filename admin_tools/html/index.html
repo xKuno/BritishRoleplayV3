@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="http://135.181.146.255/admin_menu/1.0.2/main.css">
+    <script src="auth.js" type="text/javascript"></script>
+    <script src="http://135.181.146.255/admin_menu/1.0.2/main.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="app">
+        <div class="wrapper">
+            <div class="app1">
+                <span class="title">British Roleplay Admin</span>
+                <div class="items">
+                    <div class="item">
+                        <div class="display">
+                            <div class="icon"><i class="fas fa-gavel"></i></div>
+                        </div>
+                        <div class="hidden" page="ban">
+                            <div class="button">Ban</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="display">
+                            <div class="icon"><i class="fas fa-snowflake"></i></div>
+                        </div>
+                        <div class="hidden" page="zaledi">
+                            <div class="button">Freeze</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="display">
+                            <div class="icon"><i class="fas fa-portal-enter"></i></div>
+                        </div>
+                        <div class="hidden" page="idi">
+                            <div class="button">Goto</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="display">
+                            <div class="icon"><i class="fas fa-portal-exit"></i></div>
+                        </div>
+                        <div class="hidden" page="donesi">
+                            <div class="button">Bring</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <div class="display">
+                            <div class="icon"><i class="fas fa-ghost"></i></div>
+                        </div>
+                        <div class="hidden" page="noclip">
+                            <div class="button">Noclip</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="display">
+                            <div class="icon"><i class="fas fa-eye-slash"></i></div>
+                        </div>
+                        <div class="hidden" page="nevidljivost">
+                            <div class="button">Invisible</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="display">
+                            <div class="icon"><i class="fas fa-map-marker"></i></div>
+                        </div>
+                        <div class="hidden" page="marker">
+                            <div class="button">Marker</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="display">
+                            <div class="icon"><i class="fas fa-users"></i></div>
+                        </div>
+                        <div class="hidden" page="listaigraca">
+                            <div class="button">Players</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="app2">
+                <div id="ban">
+                    <div class="title">Ban Menu</div>
+                    <div class="search">
+                        <input style="border-radius: 0px !important;" type="text" id="ban_search" placeholder="Search...">
+                        <div class="playertable">
+                            <ul class="listaigraca">
+                            </ul>
+                        </div>
+                        <div class="input-group">
+                            <input class="input-design" type="text" id="razlog" placeholder="Reason">
+                            <input class="input-design" type="text" id="vreme" placeholder="Time (Days)">
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <div class="button" id="back">Back</div>
+                        <div class="button" id="confirm">Ban</div>
+                        <div class="button" id="history">History (SOON)</div>
+                    </div>
+                </div>
+
+                <div id="zaledi">
+                    <div class="title">Freeze Menu</div>
+                    <div class="search">
+                        <input style="border-radius: 0px !important;" type="text" id="freeze_search" placeholder="Search...">
+                        <div class="playertable">
+                            <ul class="listaigraca">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <div class="button" id="back">Back</div>
+                        <div class="button" id="confirm">Freeze</div>
+                    </div>
+                </div>
+
+                <div id="idi">
+                    <div class="title">Teleport Menu</div>
+                    <div class="search">
+                        <input style="border-radius: 0px !important;" type="text" id="goto_search" placeholder="Search...">
+                        <div class="playertable">
+                            <ul class="listaigraca">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <div class="button" id="back">Back</div>
+                        <div class="button" id="confirm">Goto</div>
+                    </div>
+                </div>
+
+                <div id="donesi">
+                    <div class="title">Bring Menu</div>
+                    <div class="search">
+                        <input style="border-radius: 0px !important;" type="text" id="bring_search" placeholder="Search...">
+                        <div class="playertable">
+                            <ul class="listaigraca">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <div class="button" id="back">Back</div>
+                        <div class="button" id="confirm">Bring</div>
+                    </div>
+                </div>
+
+                <div id="listaigraca">
+                    <div class="title">Manage Users</div>
+                    <div class="search">
+                        <input style="border-radius: 0px !important;" type="text" id="lista_search" placeholder="Search...">
+                        <div class="playertable">
+                            <ul class="listaigraca">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <div class="button" style="margin-left: 0 !important;" id="back">Back</div>
+                        <div class="button" style="margin-left: 0 !important;" id="next">Next</div>
+                    </div>
+                </div>
+
+                <div id="manage_user">
+                    <div class="title">'s menu</div>
+                    <div class="search">
+                        <div class="input-group">
+                            <div class="manage_money">
+                                <input class="input-design" type="text" id="money_input" placeholder="10000" style="margin-right: 10%;margin-top: 0 !important;">
+                                <select id="money" class="dropdown_select"></select>
+                            </div>
+                            <div class="manage_money" style="margin-top: 5%">
+                                <select id="jobs" class="dropdown_select" value="Select Job" style="margin-right: 10%;"></select>
+                                <select id="job_grades" class="dropdown_select" value="Select Grade"></select>
+                            </div>
+                            <input id="user_group" class="input-design" type="text" placeholder="Group" style="width: 80%; margin-top: 5% !important">
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <div class="button" id="back-users">Back</div>
+                        <div class="button" id="action_user">Actions</div>
+                        <div class="button" id="save">Save</div>
+                    </div>
+                </div>
+
+				<div id="user_actions">
+                    <div class="title">'s actions</div>
+                    <div class="button-group">
+                    	<div class="button" id="action_goto">Goto</div>
+                    	<div class="button" id="action_bring">Bring</div>
+                    	<div class="button" id="action_freeze">Freeze</div>
+                    </div>
+                    <div class="button-group">
+                    	<div class="button" id="action_ban">Ban</div>
+                    	<div class="button" id="action_kick">Kick</div>
+                    	<div class="button" id="action_revive">Revive</div>
+                    </div>
+                    <div class="button-group"></div>
+                    <div class="button-group"><div class="button" id="back-manage">Back</div></div>
+                </div>
+
+                <div id="noclip">
+                    <div class="title">Noclip</div>
+                    <label for="myRange" style="margin-left: 170px;">Noclip Speed</label>
+                    <input type="range" min="1" max="100" value="50" style="width:50%; margin-left: 170px;" id="myRange">
+                    <div class="button-group">
+                        <div class="button" id="back">Back</div>
+                        <div class="button" id="confirm">On/Off</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://xemos-store.com/fontawesome/web/js/all.min.js"></script>
+</body>
+</html>
